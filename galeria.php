@@ -16,6 +16,9 @@
     <title>Clorocine</title>
 </head>
 <body>
+  <?php
+  //
+  ?>
 
   <nav class="nav-extended purple lighten-3">
       <div class="nav-wrapper">
