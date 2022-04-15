@@ -6,37 +6,6 @@ $bd = new SQLite3("filmes.db");
 $sql = "SELECT * FROM filmes";
 $filmes = $bd->query($sql);
 
-$filme1 = [
-  "titulo" => "Vingadores: Ultimato",
-  "nota" => 8.3,
-  "sinopse" => "Após os eventos devastadores de “Vingadores: Guerra Infinita”, o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências.  ",
-  "poster" => "https://image.tmdb.org/t/p/w300/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg"
-];
-
-$filme2 = [
-  "titulo" => "Ad Astra - Rumo às Estrelas",
-  "nota" => 6.1,
-  "sinopse" => "Roy McBride é um engenheiro espacial, portador de um leve grau de autismo, que decide empreender a maior jornada de sua vida: viajar para o espaço, cruzar a galáxia e tentar descobrir o que aconteceu com seu pai, um astronauta que se perdeu há vinte anos atrás no caminho para Netuno.",
-  "poster" => "https://image.tmdb.org/t/p/w300/wigZBAmNrIhxp2FNGOROUAeHvdh.jpg"
-];
-
-$filme3 = [
-  "titulo" => "Sonic 2: O Filme",
-  "nota" => 7.8,
-  "sinopse" => "Depois de se estabelecer em Green Hills, Sonic está pronto para mais liberdade e deixar sua marca como um herói, e Tom e Maddie concordam em deixá-lo em casa enquanto vão de férias. Mas, assim que eles se foram, Dr. Robotnik volta, desta vez com um novo parceiro, Knuckles, em busca de uma esmeralda que tem o poder de construir e destruir civilizações. Sonic se une a um novo companheiro, Tails, e juntos eles embarcam em uma jornada para encontrar a esmeralda antes que ela caia nas mãos erradas.",
-  "poster" => "https://image.tmdb.org/t/p/w300/f4SvCKIUrC2cDR7Xo4k1kaGAqQ2.jpg"
-];
-
-$filme4 = [
-  "titulo" => "Batman",
-  "nota" => 7.9,
-  "sinopse" => "Bruce Wayne é um jovem bilionário da cidade de Gotham City, Nova Jersey, que também age secretamente como o vigilante noturno Batman após o assassinato dos seus pais.",
-  "poster" => "https://image.tmdb.org/t/p/w300/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg"
-];
-
-//$filmes = [$filme1, $filme2, $filme3, $filme4];
-
-
 ?>
 
 <body>
@@ -87,5 +56,13 @@ $filme4 = [
 
 
 </body>
+
+<?php if(isset($_GET["msg"])) : ?>
+  <script>
+    M.toast({
+      html: '<?= $_GET["msg"] ?>'
+    });
+  </script>
+<?php endif ?>
 
 </html>
