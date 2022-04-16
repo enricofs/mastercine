@@ -37,8 +37,8 @@ else
     echo "\nerro ao inserir filmes\n"; 
 
 
-$sql = "INSERT INTO filmes (id, titulo, poster, sinopse, nota) VALUES (
-    1,
+$sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
+
     'Batman',
     'https://image.tmdb.org/t/p/w300/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg',
     'Bruce Wayne é um jovem bilionário da cidade de Gotham City, Nova Jersey, que também age secretamente como o vigilante noturno Batman após o assassinato dos seus pais.',
