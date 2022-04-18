@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="../style.css">
 
-    <title>Clorocine</title>
+    <title>Mastercine</title>
 </head>
 
 <?php
