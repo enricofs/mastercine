@@ -22,7 +22,7 @@ if ($bd->exec($sql))
 else
     echo "\nerro ao criar tabela filmes\n"; 
 
-
+/*
 $sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) VALUES (
     
     'Vingadores',
@@ -49,5 +49,5 @@ if ($bd->exec($sql))
     echo "\nfilmes inseridos com sucesso\n"; 
 else
     echo "\nerro ao inserir filmes\n"; 
-
+*/
 ?>

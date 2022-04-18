@@ -33,6 +33,9 @@ $filmes = $controller->index();
 
   <div class="container">
     <div class="row">
+
+      <?php if (!$filmes) echo "<p class='card-panel red lighten-4'>Ops... Nenhum filme cadastrado!</p>" ?>
+
       <?php foreach($filmes as $filme) : ?>
         <div class="col s12 m6 l3">
           <div class="card hoverable">
