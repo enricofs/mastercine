@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=he, initial-scale=1.0">
-    <title>Mastercine</title>
-</head>
+<?php include "cabecalho.php" ?>
+    
 <body>
-    <h1>Página não encontrada</h1>
-    <a href="/">Voltar para página inicial</a>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2 l6 offset-l3">
+                <img src="../imagens/img-404.png" alt="" class="responsive-img">
+                <h2>Ops... Página não encontrada</h2>
+                <a href="/">Voltar para página inicial</a>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+
 
 <?php
 //

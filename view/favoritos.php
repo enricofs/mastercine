@@ -1,5 +1,7 @@
 <?php include "cabecalho.php" ?>
 
+<body>
+
 <?php
 
 //session_start();
@@ -9,8 +11,6 @@ $controller = new FilmesController();
 $filmes = $controller->index();
 
 ?>
-
-<body>
 
   <nav class="nav-extended red lighten-3">
     <div class="nav-wrapper">
@@ -24,17 +24,18 @@ $filmes = $controller->index();
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent red darken-1">
-        <li class="tab"><a class="active" href="/">Todos</a></li>
-        <li class="tab"><a href="/favoritos">Favoritos</a></li>
+        <li class="tab"><a href="/">Todos</a></li>
+        <li class="tab"><a class="active" href="/favoritos">Favoritos</a></li>
       </ul>
     </div>
   </nav>
 
+  
   <div class="container">
     <div class="row">
 
-      <?php if (!$filmes) echo "<p class='card-panel red lighten-4'>Ops... Nenhum filme cadastrado!</p>" ?>
-
+      <?php if ($filmes) echo "<p class='card-panel red lighten-4'>Ops... Ainda não desenvolvemos essa funcionalidade!</p>" ?>
+<!--
        <?php foreach ($filmes as $filme) : ?>
         <div class="col s12 m6 l3 xl3">
           <div class="card hoverable card-serie">
@@ -61,56 +62,6 @@ $filmes = $controller->index();
           </div>
         </div>
       <?php endforeach ?>
-      
+
     </div>
   </div>
-
-  <?= Mensagem::mostrar(); ?>
-
-  <script>
-    document.querySelectorAll(".btn-fav").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const id = btn.getAttribute("data-id")
-        fetch(`/favoritar/${id}`)
-        .then(response => response.json())
-        .then(response => {
-          if(response.success === "ok"){
-            if (btn.querySelector("i").innerHTML === "favorite"){
-              btn.querySelector("i").innerHTML = "favorite_border"
-            } else{
-              btn.querySelector("i").innerHTML = "favorite"
-            }
-
-          }
-        })
-        .catch( error => {
-          M.toast({html: 'Erro ao favoritar'})
-        })
-      });
-    });
-
-    document.querySelectorAll(".btn-delete").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const id = btn.getAttribute("data-id")
-        const requestConfig = { method: "DELETE", headers: new Headers()}
-        fetch(`/filmes/${id}`, requestConfig)
-        .then(response => response.json())
-        .then(response => {
-          if(response.success === "ok"){
-            const card = btn.closest(".col")
-            card.classList.add("fadeOut")
-            setTimeout(() => card.remove(), 1000)
-          }
-        })
-        .catch( error => {
-          M.toast({html: 'Erro ao deletar'})
-        })
-      });
-    });
-
-
-  </script>
-
-</body>
-
-</html>

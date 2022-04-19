@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="../style.css">
 
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+
     <title>Mastercine</title>
 </head>
 

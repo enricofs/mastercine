@@ -2,11 +2,11 @@
 
 <body>
 
-    <nav class="nav-extended purple lighten-3">
+    <nav class="nav-extended red lighten-3">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                 <li><a href="/">Galeria</a></li>
-                <li class="active"><a href="cadastrar.php">Cadastrar</a></li>
+                <li class="active"><a href="/novo">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">
@@ -30,16 +30,12 @@
                         </div>
 
                         <!-- input sinopse-->
-                        <div class="row">
-                            <form class="col s12">
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <textarea name="sinopse" id="sinopse" class="materialize-textarea"></textarea>
                                         <label for="sinopse">Sinopse</label>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
 
                         <!-- input nota-->
                         <div class="row">
@@ -51,7 +47,7 @@
 
                         <!-- input capa-->
                         <div class="file-field input-field">
-                            <div class="btn purple lighten-2 black-text">
+                            <div class="btn red lighten-2 black-text">
                                 <span>Capa</span>
                                 <input type="file" name="poster_file">
                             </div>
@@ -63,7 +59,7 @@
                     </div>
                     <div class="card-action">
                         <a class="waves-effect waves-light btn grey" href="/">Cancelar</a>
-                        <button type="submit" class="waves-effect waves-light btn purple">Confirmar</button>
+                        <button type="submit" class="waves-effect waves-light btn red">Confirmar</button>
                     </div>
                 </div>
             </div>
